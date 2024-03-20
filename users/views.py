@@ -6,10 +6,10 @@ from rest_framework.exceptions import AuthenticationFailed
 from users.serializers import UserSerializer
 from .models import User
 import jwt, datetime
-from MainAuth.Modules.sign_up import signup_user
-from MainAuth.Modules.sign_in import signin_user
-from MainAuth.Modules.sign_out import sign_out_user
-from MainAuth.Modules.me import get_me
+from Modules.sign_up import signup_user
+from Modules.sign_in import signin_user
+from Modules.sign_out import sign_out_user
+from Modules.me import get_me
 
 class Sign_Up(APIView):
     def post(self, request):
