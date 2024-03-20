@@ -38,8 +38,9 @@ from users.serializers import UserSerializer
 from users.models import User
 
 def get_me(request):
+    print(request)
     user = getattr(request, 'user', None)
-
+    print(user)
     if user is None or user.is_anonymous:
         raise AuthenticationFailed('Unauthenticated!')
 

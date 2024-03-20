@@ -11,7 +11,7 @@ from MainAuth.Modules.sign_in import signin_user
 from MainAuth.Modules.sign_out import sign_out_user
 from MainAuth.Modules.me import get_me
 
-class Sign_Up(generics.CreateAPIView):
+class Sign_Up(APIView):
     def post(self, request):
         data = request.data
         user_data = signup_user(data)
